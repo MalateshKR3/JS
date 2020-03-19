@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON Example.</title>
+</head>
+
+<body>
+    <script>
+        var person = {
+            firstname: "Malatesh",
+            lastName: "K R",
+            id: 103,
+            place: "Soraba"
+        };
+        document.write(JSON.stringify(person));
+        document.write("<br>");
+        document.write(person.place);
+        document.write("<br>");
+        var person1 = JSON.parse(JSON.stringify(person));
+        document.write("<br>");
+        document.write(person1.id);
+        document.write("<br>");
+        document.write("------------------------------------------local storeage-------------------------------------------------")
+        document.write("<br>");
+        // Storing data:
+        myObj = { name: "John", age: 31, city: "New York" };
+        myJSON = JSON.stringify(myObj);
+        localStorage.setItem("testJSON", myJSON);
+        // Retrieving data:
+        text = localStorage.getItem("testJSON");
+        obj = JSON.parse(text);
+        document.write(obj.name);
+        document.write("<br>");
+        var myObj = {
+            "name": "John",
+            "age": 30,
+            "cars": {
+                "car1": "Ford",
+                "car2": "BMW",
+                "car3": "Fiat"
+            }
+        }
+        //document.write(myObj.cars.car2+"<br>");
+        //document.getElementById("demo").innerHTML += myObj.cars.car2 + "<br>";
+        //or:
+        //document.getElementById("demo").innerHTML += ;
+        //document.write(myObj.cars["car2"]+"<br>");
+        for (var x in myObj.cars) {
+            document.write(myObj.cars[x] + "<br>")
+        }
+        document.write("----------------------Parse---------------------------------------<br>");
+        JSON.parse(JSON.stringify(myObj.cars), function (key, value) {
+            document.write(key + "  " + value + "<br>");
+
+        });
+            var jsonarray = {
+                friends: [
+                    { name: "Malatesh" },
+                    { name: "Khurram" },
+                    { name:"Ganesh" }
+                ]
+            };
+       
+        for(var i in jsonarray.friends){
+            document.write(jsonarray.friends[i].name+"<br>");
+        }
+
+
+
+
+
+    </script>
+</body>
+
+</html>

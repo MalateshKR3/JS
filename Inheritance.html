@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+    
+    var Employee = function(name){
+        this.name=name;
+
+        Employee.prototype.getName= function(){
+           return this.name;
+        }
+    }
+    var PermanentEmployee = function(salary){
+        this.salary=salary;
+    }
+
+    PermanentEmployee.prototype = new Employee("Malatesh");
+
+    var pe = new PermanentEmployee(50000);
+    document.write(pe.getName());
+    document.write(pe.salary);
+    
+
+    </script>
+</body>
+</html>

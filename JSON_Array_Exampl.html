@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON Array</title>
+    </head>
+<body>
+    <script>
+        var jsonarray={
+            name:"Malatesh",
+            friends:[
+                {id:1,name:"Khurram",workplace:["Juego","Inffrd","MMT"]},
+                {id:2,name:"Karthick",workplace:["IBM","PowerSchool","HCL"]}
+                
+
+            ]
+
+        };
+        for(var i in jsonarray.friends){
+           document.write(jsonarray.friends[i].name+"<br>"+printhere(jsonarray.friends[i].workplace)+"<br>")
+
+          
+        }
+        function printhere(obj){
+          var val=" ";
+          for(var y in obj){
+              val+=obj[y]+"<br>";
+          }
+          return val;
+        }
+
+    </script>
+    
+</body>
+</html>

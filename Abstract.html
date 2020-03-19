@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+    alert(typeof undefined);
+
+        var numbers=Number(prompt("Please enter the number","Valid Please!!!"));
+        if(isNaN(numbers)){
+            alert("OOP's its invalid!!!!");
+        }else{
+            alert("Number is "+numbers);
+        }
+        
+
+        var Car = function (name, type, price, place) {
+            this.name = name;
+            this.type = type;
+            this.price = price;
+            this.place = place;
+
+        }
+        var car = new Car("Honda", "HighEnd", 3200000, "Shimoga")
+        document.write(car.name + "<br>");
+        document.write(car.type + "<br>");
+        document.write(car.price + "<br>");
+        document.write(car.place + "<br>");
+        document.write("----------------------------");
+        document.write(Car.name + "<br>");
+        document.write(undefined === null);
+
+        document.write("It's allright to have single quote in double quotes it's \' \\ " + "<br>");
+        document.write("He is 'Johny!!!'" + "<br>")
+
+        document.write("We are so colled \" Indians\".<br>")
+        var x = "John";
+        var y = new String("John");
+        document.write(typeof x + "<br>");
+        document.write(typeof y + "<br>");
+        var value = "John";
+        var value1 = new String("John");
+        document.write(value == value1);
+        document.write("<br>")
+        document.write(value === value1);
+        document.write("<br>")
+        document.write(typeof value);
+        document.write("<br>")
+        document.write(typeof value1);
+        document.write("<br>")
+
+
+        function Employee(name, jobtitle, born) {
+            this.name = name;
+            this.jobtitle = jobtitle;
+            this.born = born;
+        }
+        Employee.salary = 2000;
+
+        var emp = new Employee("Fred Flintstone", "Caveman");
+        document.write("<br>")
+        document.write(Employee.salary);
+        document.write("<br>")
+        document.write(Employee.salary = 1000);
+        document.write("<br>")
+        document.write(Employee.salary);
+        document.write("<br>");
+        document.write(Boolean(NaN));
+        var x = new Number(500);
+        var y = new Number(500);
+        document.write("<br>");
+        document.write(x==y);
+        document.write("<br>");
+        document.write(x===y);
+
+
+
+
+    </script>
+</body>
+
+</html>
